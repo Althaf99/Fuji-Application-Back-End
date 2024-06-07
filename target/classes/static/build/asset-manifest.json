@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.13dc76f8.css",
+    "main.js": "/static/js/main.509dba21.js",
+    "static/media/Fuji.png": "/static/media/Fuji.85930dc88bd404d9996d.png",
+    "index.html": "/index.html",
+    "main.13dc76f8.css.map": "/static/css/main.13dc76f8.css.map",
+    "main.509dba21.js.map": "/static/js/main.509dba21.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13dc76f8.css",
+    "static/js/main.509dba21.js"
+  ]
+}
