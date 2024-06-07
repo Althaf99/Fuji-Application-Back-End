@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "https://prod.ds9mib04jgcnk.amplifyapp.com")
+@CrossOrigin(origins = "*")
 @RestController
 public class CommonController {
 
