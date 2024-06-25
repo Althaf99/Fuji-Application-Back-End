@@ -29,6 +29,7 @@
 /home/althaf/Documents/Projects/Fuji-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/dto/Item.java
 /home/althaf/Documents/Projects/Fuji-Back-End/src/main/java/com/project/fujicraft_management_system/Request/dto/RequestDto.java
 /home/althaf/Documents/Projects/Fuji-Back-End/src/main/java/com/project/fujicraft_management_system/Request/dto/Items.java
+/home/althaf/Documents/Projects/Fuji-Back-End/src/main/java/com/project/fujicraft_management_system/config/CorsConfig.java
 /home/althaf/Documents/Projects/Fuji-Back-End/src/main/java/com/project/fujicraft_management_system/Common/CommonRepository.java
 /home/althaf/Documents/Projects/Fuji-Back-End/src/main/java/com/project/fujicraft_management_system/Common/CommonService.java
 /home/althaf/Documents/Projects/Fuji-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/dto/Excess.java

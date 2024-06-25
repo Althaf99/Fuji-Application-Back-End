@@ -35,10 +35,12 @@ com/project/fujicraft_management_system/Request/RequestService.class
 com/project/fujicraft_management_system/Invoice/Invoice.class
 com/project/fujicraft_management_system/Request/dto/RequestDto.class
 com/project/fujicraft_management_system/DeliveryNote/dto/DeliveryNoteDto.class
+com/project/fujicraft_management_system/config/CorsConfig$1.class
 com/project/fujicraft_management_system/DeliveryNote/DeliveryNoteService.class
 com/project/fujicraft_management_system/DeliveryNote/dto/Items.class
 com/project/fujicraft_management_system/Invoice/dto/Excess.class
 com/project/fujicraft_management_system/Common/Common.class
+com/project/fujicraft_management_system/config/CorsConfig.class
 com/project/fujicraft_management_system/Common/CommonRepository.class
 com/project/fujicraft_management_system/Invoice/dto/Items$ItemsBuilder.class
 com/project/fujicraft_management_system/Invoice/InvoiceRepository.class
