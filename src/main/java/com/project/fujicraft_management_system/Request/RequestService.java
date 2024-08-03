@@ -28,7 +28,6 @@ class RequestService{
         List<Request> reqList = new ArrayList<>();
         requestDto.getItems().forEach(x -> {
             x.getItem().forEach(y->{
-
             Request reqObj = new Request();
             reqObj.setDate(requestDto.getDate());
             reqObj.setPo(requestDto.getPo());
