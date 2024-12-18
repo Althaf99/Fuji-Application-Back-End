@@ -2,10 +2,12 @@ com/project/fujicraft_management_system/FujicraftManageApplication.class
 com/project/fujicraft_management_system/DeliveryNote/dto/DeliveryNoteDto$DeliveryNoteDtoBuilder.class
 com/project/fujicraft_management_system/Request/dto/Items.class
 com/project/fujicraft_management_system/Common/ItemNameRepository.class
+com/project/fujicraft_management_system/Stock/StockRepository.class
 com/project/fujicraft_management_system/Invoice/dto/InvoiceDto$InvoiceDtoBuilder.class
 com/project/fujicraft_management_system/Invoice/InvoiceController.class
 com/project/fujicraft_management_system/Invoice/dto/Item.class
 com/project/fujicraft_management_system/Request/RequestController.class
+com/project/fujicraft_management_system/Stock/Dto/Items$ItemsBuilder.class
 com/project/fujicraft_management_system/DeliveryNote/dto/Item.class
 com/project/fujicraft_management_system/Invoice/dto/InvoiceDto.class
 com/project/fujicraft_management_system/Invoice/InvoiceService.class
@@ -16,6 +18,7 @@ com/project/fujicraft_management_system/Request/dto/Items$ItemsBuilder.class
 com/project/fujicraft_management_system/Invoice/dto/Items.class
 com/project/fujicraft_management_system/Common/Dto/RequestNumbers$RequestNumbersBuilder.class
 com/project/fujicraft_management_system/DeliveryNote/DeliveryNoteRepository.class
+com/project/fujicraft_management_system/Stock/Dto/Item.class
 com/project/fujicraft_management_system/DeliveryNote/dto/Items$ItemsBuilder.class
 com/project/fujicraft_management_system/Request/dto/RequestDto$RequestDtoBuilder.class
 com/project/fujicraft_management_system/Request/dto/Item.class
@@ -24,6 +27,7 @@ com/project/fujicraft_management_system/DeliveryNote/DeliveryNote.class
 com/project/fujicraft_management_system/Common/ItemColorsRepository.class
 com/project/fujicraft_management_system/Common/Dto/RequestNumbers.class
 com/project/fujicraft_management_system/Invoice/dto/Excess$ExcessBuilder.class
+com/project/fujicraft_management_system/Stock/StockService.class
 com/project/fujicraft_management_system/Invoice/ExcessRepository.class
 com/project/fujicraft_management_system/Common/Dto/ItemNames$ItemNamesBuilder.class
 com/project/fujicraft_management_system/Common/Dto/ItemNames.class
@@ -37,8 +41,10 @@ com/project/fujicraft_management_system/Request/dto/RequestDto.class
 com/project/fujicraft_management_system/DeliveryNote/dto/DeliveryNoteDto.class
 com/project/fujicraft_management_system/config/CorsConfig$1.class
 com/project/fujicraft_management_system/DeliveryNote/DeliveryNoteService.class
+com/project/fujicraft_management_system/Stock/StockController.class
 com/project/fujicraft_management_system/DeliveryNote/dto/Items.class
 com/project/fujicraft_management_system/Invoice/dto/Excess.class
+com/project/fujicraft_management_system/Stock/Dto/Items$Item.class
 com/project/fujicraft_management_system/Common/Common.class
 com/project/fujicraft_management_system/config/CorsConfig.class
 com/project/fujicraft_management_system/Common/CommonRepository.class
@@ -46,4 +52,6 @@ com/project/fujicraft_management_system/Invoice/dto/Items$ItemsBuilder.class
 com/project/fujicraft_management_system/Invoice/InvoiceRepository.class
 com/project/fujicraft_management_system/Request/RequestRepository.class
 com/project/fujicraft_management_system/Common/CommonController.class
+com/project/fujicraft_management_system/Stock/Dto/Items.class
 com/project/fujicraft_management_system/Common/RequestNumbersRepository.class
+com/project/fujicraft_management_system/Stock/Stock.class
