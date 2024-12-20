@@ -1,10 +1,17 @@
 package com.project.fujicraft_management_system.Stock;
 
+import com.project.fujicraft_management_system.Request.Request;
 import com.project.fujicraft_management_system.Stock.Dto.Items;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StockService {
@@ -32,5 +39,50 @@ public class StockService {
                         );
             }
         }
+    }
+
+    public List<Stock> getRequests(String itemName, String itemColor) {
+        List<Stock> stocks = new ArrayList<Stock>();
+        stockRepository.findAll(Specification.where(itemNameEquals(itemName)).and(itemColorEquals(itemColor))).forEach(updated -> stocks.add((Stock) updated));
+        return stocks;
+    }
+
+    private Specification<Stock> itemNameEquals(final String itemName) {
+
+        return StringUtils.isEmpty(itemName) ? null : (root, query, builder) -> builder.equal(root.get("itemName"), itemName);
+    }
+
+    private Specification<Stock> itemColorEquals(final String itemColor) {
+
+        return StringUtils.isEmpty(itemColor) ? null : (root, query, builder) -> builder.equal(root.get("itemColor"), itemColor);
+    }
+
+    public ResponseEntity<Object> deleteStockById(int id) {
+        try {
+            //check if employee exist in database
+            Optional<Stock> poRequest = stockRepository.findById(id);
+            if (poRequest != null) {
+                stockRepository.deleteById(id);
+                return new ResponseEntity<>(HttpStatus.OK);
+            }
+
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    public ResponseEntity<Object> updateStockById(int id, Stock stock) {
+        Optional<Stock> poObj = stockRepository.findById(id);
+        Stock poRequest = poObj.get();
+        if (poObj != null) {
+            poRequest.setItemName(stock.getItemName());
+            poRequest.setQuantity(stock.getQuantity());
+            poRequest.setItemColor(stock.getItemColor());
+            return new ResponseEntity<>(stockRepository.save(poRequest), HttpStatus.OK);
+        }
+
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 }
