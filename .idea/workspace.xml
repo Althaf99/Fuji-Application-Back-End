@@ -5,72 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3077e8f3-d2eb-434c-83a3-81bdf6de8708" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/fujicraft_management_system/Request/dto/MergedItemDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/fujicraft_management_system/Stock/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/fujicraft_management_system/Stock/StockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/fujicraft_management_system/Stock/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/fujicraft_management_system/Stock/StockService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/Common.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/CommonController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/CommonRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/CommonService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/Dto/ItemColors$ItemColorsBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/Dto/ItemColors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/Dto/ItemNames$ItemNamesBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/Dto/ItemNames.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/Dto/RequestNumbers$RequestNumbersBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/Dto/RequestNumbers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/ItemColorsRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/ItemNameRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/RequestNumbersRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/DeliveryNote/DeliveryNote.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/DeliveryNote/DeliveryNoteController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/DeliveryNote/DeliveryNoteRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/DeliveryNote/DeliveryNoteService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/DeliveryNote/dto/DeliveryNoteDto$DeliveryNoteDtoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/DeliveryNote/dto/DeliveryNoteDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/DeliveryNote/dto/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/DeliveryNote/dto/Items$ItemsBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/DeliveryNote/dto/Items.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/FujicraftManageApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Invoice/ExcessRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Invoice/Invoice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Invoice/InvoiceRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Invoice/InvoiceService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Invoice/dto/Excess$ExcessBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Invoice/dto/Excess.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Invoice/dto/InvoiceDto$InvoiceDtoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Invoice/dto/InvoiceDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Invoice/dto/Items$ItemsBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Invoice/dto/Items.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Invoice/dto/ResponseDto$ResponseDtoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Invoice/dto/ResponseDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Request/Request.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Request/RequestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Request/RequestRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Request/RequestService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Request/dto/Item$ItemBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Request/dto/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Request/dto/Items$ItemsBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Request/dto/Items.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Request/dto/RequestDto$RequestDtoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Request/dto/RequestDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Stock/Dto/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Stock/Dto/Items$Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Stock/Dto/Items$ItemsBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Stock/Dto/Items.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Stock/Stock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Stock/StockController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Stock/StockRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Stock/StockService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/config/CorsConfig$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/config/CorsConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/fujicraft_application-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/fujicraft_application-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/fujicraft_management_system/Common/Dto/ItemNames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/fujicraft_management_system/Common/Dto/ItemNames.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/fujicraft_management_system/Request/RequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/fujicraft_management_system/Request/RequestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/fujicraft_management_system/Request/RequestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/fujicraft_management_system/Request/RequestRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/fujicraft_management_system/Request/RequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/fujicraft_management_system/Request/RequestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/Dto/ItemNames$ItemNamesBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/Dto/ItemNames$ItemNamesBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/Dto/ItemNames.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Common/Dto/ItemNames.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Request/RequestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Request/RequestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Request/RequestRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Request/RequestRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Request/RequestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/fujicraft_management_system/Request/RequestService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,19 +56,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.FujicraftManageApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "stock",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/althafazad/Desktop/Fuji-Application-Back-End/pom.xml",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.FujicraftManageApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;stock&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/althafazad/Desktop/Fuji-Application-Back-End/pom.xml&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="FujicraftManageApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.project.fujicraft_management_system.FujicraftManageApplication" />

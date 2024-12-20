@@ -18,4 +18,13 @@ public class ItemNames {
 
     @Column
     private String itemName;
+
+    @Column
+    private int cavity;
+
+    @Column
+    private double weightPerPiece;
+
+    @Column
+    private double cycleTime;
 }

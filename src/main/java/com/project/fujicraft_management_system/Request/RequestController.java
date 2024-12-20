@@ -1,5 +1,6 @@
 package com.project.fujicraft_management_system.Request;
 
+import com.project.fujicraft_management_system.Request.dto.MergedItemDetails;
 import com.project.fujicraft_management_system.Request.dto.RequestDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +13,6 @@ import java.util.List;
 class RequestController {
     @Autowired
     RequestService  requestService;
-
 
     @PostMapping("/purchaseOrder")
     private RequestDto saveRequest(@RequestBody RequestDto requestDto){
@@ -35,5 +35,8 @@ class RequestController {
         return requestService.updateRequest(id,request);
     }
 
-
+    @GetMapping("/merged")
+    public List<MergedItemDetails> getMergedItemDetails() {
+        return requestService.getMergedItemDetails();
+    }
 }
