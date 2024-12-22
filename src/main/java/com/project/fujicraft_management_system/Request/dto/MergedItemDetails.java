@@ -1,4 +1,11 @@
 package com.project.fujicraft_management_system.Request.dto;
+
+import lombok.*;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@Builder
 public class MergedItemDetails {
     private String itemName;
     private String itemColor;
@@ -9,16 +16,16 @@ public class MergedItemDetails {
     private double cycleTime;
 
     // Constructor that matches the fields selected in the query
-    public MergedItemDetails(String itemName, String itemColor, int poBalanceQuantity,
-                             int stockBalanceQuantity, int cavity, double weightPerPiece, double cycleTime) {
+    public MergedItemDetails(String itemName, String itemColor, Integer requestQuantity, Integer stockQuantity, Integer cavity, Double weightPerPiece, Double cycleTime) {
         this.itemName = itemName;
         this.itemColor = itemColor;
-        this.poBalanceQuantity = poBalanceQuantity;
-        this.stockBalanceQuantity = stockBalanceQuantity;
-        this.cavity = cavity;
-        this.weightPerPiece = weightPerPiece;
-        this.cycleTime = cycleTime;
+        this.poBalanceQuantity = requestQuantity != null ? requestQuantity : 0;
+        this.stockBalanceQuantity = stockQuantity != null ? stockQuantity : 0;
+        this.cavity = cavity != null ? cavity : 0;
+        this.weightPerPiece = weightPerPiece != null ? weightPerPiece : 0.0;
+        this.cycleTime = cycleTime != null ? cycleTime : 0.0;
     }
+
 
     // Getters and setters (if required)
     public String getItemName() {

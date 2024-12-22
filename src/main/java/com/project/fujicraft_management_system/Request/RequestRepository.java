@@ -12,10 +12,22 @@ public interface RequestRepository extends JpaRepository<Request,Integer>, JpaSp
     Optional<Request> findByPo(String po);
     Optional<Request> findByPoAndItemNameAndItemColor(String po, String itemName,String itemColor);
 
-    @Query("SELECT new com.project.fujicraft_management_system.Request.dto.MergedItemDetails(pb.itemName, pb.itemColor, pb.quantity, sb.quantity, iname.cavity, iname.weightPerPiece, iname.cycleTime) " +
+    @Query("SELECT new com.project.fujicraft_management_system.Request.dto.MergedItemDetails( " +
+            "COALESCE(pb.itemName, sb.itemName), " +
+            "COALESCE(pb.itemColor, sb.itemColor), " +
+            "pb.quantity, " +
+            "sb.quantity, " +
+            "iname.cavity, " +
+            "iname.weightPerPiece, " +
+            "iname.cycleTime) " +
             "FROM Request pb " +
-            "JOIN Stock sb ON pb.itemName = sb.itemName AND pb.itemColor = sb.itemColor " +
-            "JOIN ItemNames iname ON pb.itemName = iname.itemName")
+            "FULL JOIN Stock sb ON pb.itemName = sb.itemName AND pb.itemColor = sb.itemColor " +
+            "LEFT JOIN ItemNames iname ON COALESCE(pb.itemName, sb.itemName) = iname.itemName")
     List<MergedItemDetails> getMergedItemDetails();
+
+
+
+
+
 
 }

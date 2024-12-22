@@ -1,5 +1,8 @@
 package com.project.fujicraft_management_system.Stock;
 
+import com.project.fujicraft_management_system.DeliveryNote.dto.DeliveryNoteDto;
+import com.project.fujicraft_management_system.Invoice.Invoice;
+import com.project.fujicraft_management_system.Invoice.dto.Excess;
 import com.project.fujicraft_management_system.Request.Request;
 import com.project.fujicraft_management_system.Stock.Dto.Items;
 import org.apache.commons.lang3.StringUtils;
@@ -84,5 +87,21 @@ public class StockService {
         }
 
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
+    public void updateStockBasedOnDeliveryNote(DeliveryNoteDto deliveryNoteDto) {
+        deliveryNoteDto.getItems().forEach(e -> {
+            e.getItem().forEach(i -> {
+                Optional<Stock> stockOptional = stockRepository.findByItemNameAndItemColor(
+                        e.getItemName(),
+                        i.getItemColor()
+                );
+                if (stockOptional.isPresent()) {
+                    Stock stock = stockOptional.get();
+                    stock.setQuantity(stock.getQuantity() - i.getQuantity());
+                    stockRepository.save(stock);
+                }
+            });
+        });
     }
 }
