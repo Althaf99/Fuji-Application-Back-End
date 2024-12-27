@@ -2,6 +2,7 @@ package com.project.fujicraft_management_system.DeliveryNote;
 
 import com.project.fujicraft_management_system.DeliveryNote.dto.DeliveryNoteDto;
 import com.project.fujicraft_management_system.Invoice.InvoiceService;
+import com.project.fujicraft_management_system.Stock.StockService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
@@ -24,6 +25,9 @@ public class DeliveryNoteService {
     @Autowired
     InvoiceService invoiceService;
 
+    @Autowired
+    StockService stockService;
+
 
     public List<DeliveryNote> saveDeliveryNote(DeliveryNoteDto deliveryNoteDto) {
         List<DeliveryNote> deliveryNote = new ArrayList<DeliveryNote>();
@@ -38,6 +42,7 @@ public class DeliveryNoteService {
                 deliveryNote.add(deliveryNoteObj);
             });
         });
+        stockService.updateStockBasedOnDeliveryNote(deliveryNoteDto);
         deliveryNoteRepository.saveAll(deliveryNote);
         invoiceService.createInvoiceDeliveryNote(deliveryNoteDto);
         return deliveryNote;

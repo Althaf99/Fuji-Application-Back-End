@@ -1,6 +1,6 @@
 package com.project.fujicraft_management_system.Request;
 
-import com.project.fujicraft_management_system.Invoice.Invoice;
+import com.project.fujicraft_management_system.Request.dto.MergedItemDetails;
 import com.project.fujicraft_management_system.Request.dto.RequestDto;
 import org.apache.commons.lang3.StringUtils;
 import org.modelmapper.ModelMapper;
@@ -81,6 +81,10 @@ class RequestService{
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+    public List<MergedItemDetails> getMergedItemDetails() {
+        return requestRepository.getMergedItemDetails();
+    }
+
 
 
     private Specification<Request> itemCodeEquals(final String itemCode) {
@@ -111,5 +115,6 @@ class RequestService{
         }
         return null;
     }
+
 
 }

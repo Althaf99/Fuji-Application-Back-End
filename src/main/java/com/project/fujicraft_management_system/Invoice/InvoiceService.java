@@ -45,7 +45,6 @@ public class InvoiceService {
         requestRepository.findAll().forEach(request -> requestsList.add((Request) request));
         deliveryNoteDto.getItems().forEach(e -> {
             e.getItem().forEach(i -> {
-
                 requestsList.forEach(r -> {
                     Invoice invoiceObj = new Invoice();
                     if (e.getItemName().equals(r.getItemName()) && i.getItemColor().equals(r.getItemColor())  && r.getQuantity() > 0 && i.getQuantity() > 0) {
