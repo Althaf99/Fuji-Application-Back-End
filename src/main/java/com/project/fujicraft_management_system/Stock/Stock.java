@@ -21,4 +21,5 @@ public class Stock {
 
     @Column
     private String itemColor;
+
 }
