@@ -33,7 +33,6 @@ public class Request {
     @Column
     private String po;
 
-
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private LocalDate date;
 }
