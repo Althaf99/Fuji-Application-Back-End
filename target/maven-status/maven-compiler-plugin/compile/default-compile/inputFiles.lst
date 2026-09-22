@@ -1,43 +1,76 @@
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Request/RequestService.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/DeliveryNote/dto/DeliveryNoteDto.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Stock/Dto/Item.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/dto/InvoiceDto.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Request/dto/Items.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/RequestNumbersRepository.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/ExcessRepository.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/DeliveryNote/dto/Items.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Stock/Dto/Items.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/DeliveryNote/dto/Item.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Stock/StockService.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/DeliveryNote/DeliveryNoteRepository.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/Dto/ItemColors.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/Invoice.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/config/CorsConfig.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/Dto/ItemNames.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/dto/Items.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/InvoiceService.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/Common.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/InvoiceController.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/CommonRepository.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/CommonService.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/DeliveryNote/DeliveryNote.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/Dto/RequestNumbers.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/DeliveryNote/DeliveryNoteService.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/dto/Excess.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Request/dto/RequestDto.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Request/RequestRepository.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Request/dto/Item.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Stock/StockRepository.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Request/RequestController.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/CommonController.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Request/dto/MergedItemDetails.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Request/Request.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/ItemColorsRepository.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Stock/Stock.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/ItemNameRepository.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/DeliveryNote/DeliveryNoteController.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/dto/ResponseDto.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/FujicraftManageApplication.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Stock/StockController.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/InvoiceRepository.java
-/Users/althafazad/Desktop/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/dto/Item.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/GrnItemRepository.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/MasterBatchRepository.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/RequestNumbersRepository.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/DeliveryNote/DeliveryNoteRepository.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/ItemService.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Request/dto/Item.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/InvoiceService.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/VendorController.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/StockModuleExceptionHandler.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/DeliveryNote/DeliveryNoteService.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/ItemNameRepository.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Stock/Stock.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Stock/StockController.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/Invoice.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/GrnItemRequest.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/GrnService.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/ApiError.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Request/dto/Items.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Request/RequestController.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/Dto/RequestNumbers.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Request/RequestService.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Stock/Dto/Item.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Request/RequestRepository.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/ConsumptionController.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/StockQueryController.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/Grn.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/dto/Item.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/InvoiceRepository.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/RawMaterial.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Request/Request.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/GrnController.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/StockRow.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/VendorService.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/ConsumptionService.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Stock/StockRepository.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Request/dto/RequestDto.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/DeliveryNote/DeliveryNoteController.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/dto/Items.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/ConsumptionRequest.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Request/dto/MergedItemDetails.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Stock/StockService.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/Consumption.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/MasterBatch.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/CommonService.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/RawMaterialRepository.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/ItemRequest.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/InvoiceController.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/GrnRepository.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/FujicraftManageApplication.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/VendorRequest.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/dto/ResponseDto.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/StockModuleException.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/VendorRepository.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/ItemColorsRepository.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/CommonController.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/DeliveryNote/dto/Item.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/Dto/ItemNames.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/ExcessRepository.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/StockQueryService.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Stock/Dto/Items.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/dto/InvoiceDto.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/DeliveryNote/DeliveryNote.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Invoice/dto/Excess.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/ConsumptionRepository.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/Common.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/config/CorsConfig.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/CommonRepository.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/GrnItem.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/GrnRequest.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/Common/Dto/ItemColors.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/PageResponse.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/ItemController.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/DeliveryNote/dto/DeliveryNoteDto.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/DeliveryNote/dto/Items.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/Vendor.java
+/Users/althafazad/Documents/Personal Projects/Fuji-Application-Back-End/src/main/java/com/project/fujicraft_management_system/RawMaterialStock/ItemType.java
