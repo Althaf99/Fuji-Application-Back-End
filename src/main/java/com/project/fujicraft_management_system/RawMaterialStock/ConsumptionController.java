@@ -8,6 +8,7 @@ import java.time.LocalDate;
 
 @RestController
 @RequestMapping("/api/consumptions")
+@CrossOrigin(origins = "*")
 public class ConsumptionController {
     private final ConsumptionService service;
 

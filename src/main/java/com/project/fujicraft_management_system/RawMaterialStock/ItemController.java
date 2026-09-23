@@ -5,6 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "*")
+
 public class ItemController {
     private final ItemService service;
 
@@ -21,9 +23,8 @@ public class ItemController {
     @GetMapping("/api/raw-materials")
     public PageResponse<RawMaterial> listRawMaterials(@RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "20") int size, @RequestParam(defaultValue = "id") String sort,
-            @RequestParam(defaultValue = "asc") String direction, @RequestParam(required = false) String search,
-            @RequestParam(required = false) Long vendorId) {
-        return service.listRawMaterials(page, size, sort, direction, search, vendorId);
+            @RequestParam(defaultValue = "asc") String direction, @RequestParam(required = false) String search) {
+        return service.listRawMaterials(page, size, sort, direction, search);
     }
 
     @GetMapping("/api/raw-materials/{id}")
@@ -51,9 +52,8 @@ public class ItemController {
     @GetMapping("/api/master-batches")
     public PageResponse<MasterBatch> listMasterBatches(@RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "20") int size, @RequestParam(defaultValue = "id") String sort,
-            @RequestParam(defaultValue = "asc") String direction, @RequestParam(required = false) String search,
-            @RequestParam(required = false) Long vendorId) {
-        return service.listMasterBatches(page, size, sort, direction, search, vendorId);
+            @RequestParam(defaultValue = "asc") String direction, @RequestParam(required = false) String search) {
+        return service.listMasterBatches(page, size, sort, direction, search);
     }
 
     @GetMapping("/api/master-batches/{id}")

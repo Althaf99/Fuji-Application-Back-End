@@ -8,6 +8,8 @@ import java.time.LocalDate;
 
 @RestController
 @RequestMapping("/api/grns")
+@CrossOrigin(origins = "*")
+
 public class GrnController {
     private final GrnService service;
 

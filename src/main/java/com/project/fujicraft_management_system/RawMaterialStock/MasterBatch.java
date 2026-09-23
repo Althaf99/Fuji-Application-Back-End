@@ -2,13 +2,10 @@ package com.project.fujicraft_management_system.RawMaterialStock;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Index;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
@@ -20,7 +17,6 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "master_batch", uniqueConstraints = @UniqueConstraint(name = "uk_master_batch_code", columnNames = "code"), indexes = {
-        @Index(name = "idx_master_batch_vendor", columnList = "vendor_id"),
         @Index(name = "idx_master_batch_code", columnList = "code")
 })
 @Data
@@ -29,19 +25,10 @@ public class MasterBatch {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false)
-    private String name;
-    @Column(nullable = false)
     private String code;
-    @Column(nullable = false)
-    private String type;
     private String color;
-    private String size;
     @Column(nullable = false, precision = 19, scale = 6)
     private BigDecimal price;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "vendor_id", nullable = false, foreignKey = @jakarta.persistence.ForeignKey(name = "fk_master_batch_vendor"))
-    private Vendor vendor;
 
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;

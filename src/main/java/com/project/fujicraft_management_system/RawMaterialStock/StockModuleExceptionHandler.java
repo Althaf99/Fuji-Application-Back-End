@@ -28,7 +28,14 @@ public class StockModuleExceptionHandler {
 
     @ExceptionHandler(DataIntegrityViolationException.class)
     ResponseEntity<ApiError> handleIntegrity(DataIntegrityViolationException exception, HttpServletRequest request) {
-        return response(HttpStatus.CONFLICT, "The request conflicts with existing data", request, null);
+        String message = "The request conflicts with existing data";
+        String detail = exception.getMostSpecificCause().getMessage();
+        if (detail != null && detail.toLowerCase().contains("not-null")) {
+            message = "The request is missing a required database field";
+        } else if (detail != null && detail.toLowerCase().contains("unique")) {
+            message = "A record with the same unique value already exists";
+        }
+        return response(HttpStatus.CONFLICT, message, request, null);
     }
 
     private ResponseEntity<ApiError> response(HttpStatus status, String message, HttpServletRequest request,

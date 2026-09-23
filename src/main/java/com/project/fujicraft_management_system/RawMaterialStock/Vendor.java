@@ -1,5 +1,6 @@
 package com.project.fujicraft_management_system.RawMaterialStock;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,6 +15,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "raw_material_vendor")
+@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 @Data
 public class Vendor {
     @Id
@@ -26,9 +28,6 @@ public class Vendor {
     private String location;
     private String contactPerson;
     private String contactNumber;
-    private String bankName;
-    private String bankAccountNumber;
-
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
 

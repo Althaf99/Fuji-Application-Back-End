@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/vendors")
+@CrossOrigin(origins = "*")
 public class VendorController {
     private final VendorService service;
 

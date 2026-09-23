@@ -11,9 +11,7 @@ import java.time.LocalDate;
 public class StockRow {
     private Long itemId;
     private ItemType itemType;
-    private String itemName;
     private String itemCode;
-    private String vendor;
     private BigDecimal totalReceived;
     private BigDecimal totalConsumed;
     private BigDecimal availableQuantity;

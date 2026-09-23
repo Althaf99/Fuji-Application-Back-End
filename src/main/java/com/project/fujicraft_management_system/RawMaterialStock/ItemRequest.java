@@ -10,16 +10,11 @@ import java.math.BigDecimal;
 @Data
 public class ItemRequest {
     @NotBlank
-    private String name;
-    @NotBlank
     private String code;
     @NotBlank
     private String type;
     private String color;
-    private String size;
     @NotNull
     @DecimalMin(value = "0.0", inclusive = true)
     private BigDecimal price;
-    @NotNull
-    private Long vendorId;
 }

@@ -12,27 +12,32 @@ import java.util.Locale;
 public class ItemService {
     private final RawMaterialRepository rawMaterials;
     private final MasterBatchRepository masterBatches;
-    private final VendorRepository vendors;
     private final GrnItemRepository grnItems;
     private final ConsumptionRepository consumptions;
 
     public ItemService(RawMaterialRepository rawMaterials, MasterBatchRepository masterBatches,
-            VendorRepository vendors,
             GrnItemRepository grnItems, ConsumptionRepository consumptions) {
         this.rawMaterials = rawMaterials;
         this.masterBatches = masterBatches;
-        this.vendors = vendors;
         this.grnItems = grnItems;
         this.consumptions = consumptions;
     }
 
     @Transactional
     public RawMaterial createRawMaterial(ItemRequest r) {
+        String code = normalizeCode(r.getCode());
+        if (rawMaterials.existsByCodeIgnoreCase(code)) {
+            throw new StockModuleException(HttpStatus.CONFLICT, "Raw material code already exists: " + code);
+        }
         return rawMaterials.save(copy(new RawMaterial(), r));
     }
 
     @Transactional
     public MasterBatch createMasterBatch(ItemRequest r) {
+        String code = normalizeCode(r.getCode());
+        if (masterBatches.existsByCodeIgnoreCase(code)) {
+            throw new StockModuleException(HttpStatus.CONFLICT, "Master batch code already exists: " + code);
+        }
         return masterBatches.save(copy(new MasterBatch(), r));
     }
 
@@ -48,12 +53,22 @@ public class ItemService {
 
     @Transactional
     public RawMaterial updateRawMaterial(Long id, ItemRequest r) {
-        return rawMaterials.save(copy(getRawMaterial(id), r));
+        RawMaterial existing = getRawMaterial(id);
+        String code = normalizeCode(r.getCode());
+        if (!code.equalsIgnoreCase(existing.getCode()) && rawMaterials.existsByCodeIgnoreCase(code)) {
+            throw new StockModuleException(HttpStatus.CONFLICT, "Raw material code already exists: " + code);
+        }
+        return rawMaterials.save(copy(existing, r));
     }
 
     @Transactional
     public MasterBatch updateMasterBatch(Long id, ItemRequest r) {
-        return masterBatches.save(copy(getMasterBatch(id), r));
+        MasterBatch existing = getMasterBatch(id);
+        String code = normalizeCode(r.getCode());
+        if (!code.equalsIgnoreCase(existing.getCode()) && masterBatches.existsByCodeIgnoreCase(code)) {
+            throw new StockModuleException(HttpStatus.CONFLICT, "Master batch code already exists: " + code);
+        }
+        return masterBatches.save(copy(existing, r));
     }
 
     @Transactional
@@ -71,18 +86,16 @@ public class ItemService {
     }
 
     @Transactional(readOnly = true)
-    public PageResponse<RawMaterial> listRawMaterials(int page, int size, String sort, String direction, String search,
-            Long vendorId) {
-        var values = rawMaterials.findAll().stream().filter(item -> matches(item.getName(), item.getCode(), search)
-                && (vendorId == null || item.getVendor().getId().equals(vendorId))).toList();
+    public PageResponse<RawMaterial> listRawMaterials(int page, int size, String sort, String direction,
+            String search) {
+        var values = rawMaterials.findAll().stream().filter(item -> matches(item.getCode(), search)).toList();
         return page(values, page, size, sort, direction);
     }
 
     @Transactional(readOnly = true)
-    public PageResponse<MasterBatch> listMasterBatches(int page, int size, String sort, String direction, String search,
-            Long vendorId) {
-        var values = masterBatches.findAll().stream().filter(item -> matches(item.getName(), item.getCode(), search)
-                && (vendorId == null || item.getVendor().getId().equals(vendorId))).toList();
+    public PageResponse<MasterBatch> listMasterBatches(int page, int size, String sort, String direction,
+            String search) {
+        var values = masterBatches.findAll().stream().filter(item -> matches(item.getCode(), search)).toList();
         return page(values, page, size, sort, direction);
     }
 
@@ -92,35 +105,27 @@ public class ItemService {
     }
 
     private RawMaterial copy(RawMaterial item, ItemRequest r) {
-        item.setName(r.getName().trim());
-        item.setCode(r.getCode().trim());
+        item.setCode(normalizeCode(r.getCode()));
         item.setType(r.getType().trim());
         item.setColor(r.getColor());
-        item.setSize(r.getSize());
         item.setPrice(r.getPrice());
-        item.setVendor(vendor(r.getVendorId()));
         return item;
     }
 
     private MasterBatch copy(MasterBatch item, ItemRequest r) {
-        item.setName(r.getName().trim());
-        item.setCode(r.getCode().trim());
-        item.setType(r.getType().trim());
+        item.setCode(normalizeCode(r.getCode()));
         item.setColor(r.getColor());
-        item.setSize(r.getSize());
         item.setPrice(r.getPrice());
-        item.setVendor(vendor(r.getVendorId()));
         return item;
     }
 
-    private Vendor vendor(Long id) {
-        return vendors.findById(id).orElseThrow(() -> VendorService.missing("Vendor", id));
+    private boolean matches(String code, String search) {
+        return search == null || search.isBlank()
+                || code.toLowerCase(Locale.ROOT).contains(search.toLowerCase(Locale.ROOT));
     }
 
-    private boolean matches(String name, String code, String search) {
-        return search == null || search.isBlank()
-                || name.toLowerCase(Locale.ROOT).contains(search.toLowerCase(Locale.ROOT))
-                || code.toLowerCase(Locale.ROOT).contains(search.toLowerCase(Locale.ROOT));
+    private String normalizeCode(String code) {
+        return code.trim();
     }
 
     private <T> PageResponse<T> page(List<T> source, int page, int size, String sort, String direction) {
@@ -139,8 +144,7 @@ public class ItemService {
     }
 
     private Object property(Object value, String field) {
-        return switch (List.of("name", "code", "createdAt", "updatedAt").contains(field) ? field : "id") {
-            case "name" -> value instanceof RawMaterial r ? r.getName() : ((MasterBatch) value).getName();
+        return switch (List.of("code", "createdAt", "updatedAt").contains(field) ? field : "id") {
             case "code" -> value instanceof RawMaterial r ? r.getCode() : ((MasterBatch) value).getCode();
             case "createdAt" ->
                 value instanceof RawMaterial r ? r.getCreatedAt() : ((MasterBatch) value).getCreatedAt();

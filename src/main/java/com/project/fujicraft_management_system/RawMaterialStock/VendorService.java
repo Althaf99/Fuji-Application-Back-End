@@ -11,15 +11,10 @@ import java.util.List;
 @Service
 public class VendorService {
     private final VendorRepository vendorRepository;
-    private final RawMaterialRepository rawMaterialRepository;
-    private final MasterBatchRepository masterBatchRepository;
     private final GrnRepository grnRepository;
 
-    public VendorService(VendorRepository vendorRepository, RawMaterialRepository rawMaterialRepository,
-            MasterBatchRepository masterBatchRepository, GrnRepository grnRepository) {
+    public VendorService(VendorRepository vendorRepository, GrnRepository grnRepository) {
         this.vendorRepository = vendorRepository;
-        this.rawMaterialRepository = rawMaterialRepository;
-        this.masterBatchRepository = masterBatchRepository;
         this.grnRepository = grnRepository;
     }
 
@@ -48,10 +43,9 @@ public class VendorService {
     @Transactional
     public void delete(Long id) {
         get(id);
-        if (rawMaterialRepository.existsByVendorId(id) || masterBatchRepository.existsByVendorId(id)
-                || grnRepository.existsByVendorId(id))
+        if (grnRepository.existsByVendorId(id))
             throw new StockModuleException(HttpStatus.CONFLICT,
-                    "Vendor is referenced by raw materials, master batches, or GRNs");
+                    "Vendor is referenced by GRNs");
         vendorRepository.deleteById(id);
     }
 
@@ -60,8 +54,6 @@ public class VendorService {
         vendor.setLocation(request.getLocation());
         vendor.setContactPerson(request.getContactPerson());
         vendor.setContactNumber(request.getContactNumber());
-        vendor.setBankName(request.getBankName());
-        vendor.setBankAccountNumber(request.getBankAccountNumber());
         return vendor;
     }
 

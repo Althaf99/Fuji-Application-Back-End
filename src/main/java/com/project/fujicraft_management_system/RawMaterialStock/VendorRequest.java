@@ -10,6 +10,4 @@ public class VendorRequest {
     private String location;
     private String contactPerson;
     private String contactNumber;
-    private String bankName;
-    private String bankAccountNumber;
 }
