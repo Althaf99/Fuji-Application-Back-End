@@ -1,0 +1,55 @@
+--create table if not exists finance_transactions (
+--    id bigserial primary key,
+--    transaction_date date not null,
+--    due_date date,
+--    type varchar(20) not null,
+--    category varchar(40) not null,
+--    description varchar(500) not null,
+--    reference_number varchar(150) not null,
+--    invoice_id bigint,
+--    purchase_order_id bigint,
+--    party_name varchar(255),
+--    payment_method varchar(30) not null,
+--    amount numeric(19,4) not null check (amount > 0),
+--    currency varchar(3) not null default 'LKR',
+--    status varchar(20) not null,
+--    notes text,
+--    created_by varchar(255) not null,
+--    updated_by varchar(255) not null,
+--    created_at timestamp not null,
+--    updated_at timestamp not null,
+--    voided_at timestamp
+--);
+--
+--create table if not exists finance_payments (
+--    id bigserial primary key,
+--    transaction_id bigint not null references finance_transactions(id),
+--    payment_date date not null,
+--    amount numeric(19,4) not null check (amount > 0),
+--    payment_method varchar(30) not null,
+--    reference_number varchar(150),
+--    created_by varchar(255) not null,
+--    created_at timestamp not null,
+--    constraint uk_finance_payment_reference unique (transaction_id, reference_number)
+--);
+--
+--create table if not exists finance_audit_history (
+--    id bigserial primary key,
+--    transaction_id bigint not null references finance_transactions(id),
+--    action varchar(30) not null,
+--    actor varchar(255) not null,
+--    details text,
+--    created_at timestamp not null
+--);
+--
+--create index if not exists idx_finance_transaction_date on finance_transactions(transaction_date);
+--create index if not exists idx_finance_due_date on finance_transactions(due_date);
+--create index if not exists idx_finance_type on finance_transactions(type);
+--create index if not exists idx_finance_category on finance_transactions(category);
+--create index if not exists idx_finance_status on finance_transactions(status);
+--create index if not exists idx_finance_payment_method on finance_transactions(payment_method);
+--create index if not exists idx_finance_invoice on finance_transactions(invoice_id);
+--create index if not exists idx_finance_purchase_order on finance_transactions(purchase_order_id);
+--create index if not exists idx_finance_payment_date on finance_payments(payment_date);
+--create index if not exists idx_finance_payment_transaction on finance_payments(transaction_id);
+--create index if not exists idx_finance_audit_transaction on finance_audit_history(transaction_id);
