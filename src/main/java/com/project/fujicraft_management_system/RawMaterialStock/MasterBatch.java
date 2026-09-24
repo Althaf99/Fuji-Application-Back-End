@@ -26,6 +26,9 @@ public class MasterBatch {
     private Long id;
     @Column(nullable = false)
     private String code;
+
+    private String type;
+
     private String color;
     @Column(nullable = false, precision = 19, scale = 6)
     private BigDecimal price;

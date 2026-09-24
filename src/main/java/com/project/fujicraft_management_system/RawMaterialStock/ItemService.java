@@ -114,6 +114,7 @@ public class ItemService {
 
     private MasterBatch copy(MasterBatch item, ItemRequest r) {
         item.setCode(normalizeCode(r.getCode()));
+        item.setType(r.getType().trim());
         item.setColor(r.getColor());
         item.setPrice(r.getPrice());
         return item;
